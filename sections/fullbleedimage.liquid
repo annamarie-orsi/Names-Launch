@@ -1,0 +1,94 @@
+<div class="container-fluid names-fb-video pt-3 pb-md-5 mb-md-1 px-0" data-section-id="{{ section.id }}" data-section-type="video-fb-section">
+
+  <div class="names-video-fb w-100">
+
+    {% if section.settings.image %}
+
+    <img id="fbimg"
+         class="lazyload"
+         src="{{ section.settings.image | img_url:'master' }}"
+         alt="heroimage">
+      </div>
+
+    </div>
+
+
+    {% else %}
+
+      <video playsinline autoplay muted loop poster="" id="fbvid">
+
+      <source src="{{ section.settings.video_link_fb}}" type="video/webm">
+      <source src="{{ section.settings.video_link_fb}}" type="video/mp4">
+
+      </video>
+
+      {% endif %}
+
+      <div class="currentpartners w-100 d-flex justify-content-between">
+
+        <div class="ml-md-5 pl-3 pl-md-5">
+
+          <p class="cptext text-left">{{ section.settings.text-left}}</p>
+
+        </div>
+
+        <div class="mr-5 pr-5 d-none d-md-block">
+
+          <p class="cptext text-right">{{ section.settings.text-right}}</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+</div>
+
+{% schema %}
+{
+  "name": {
+    "en": "Full bleed image/Video"
+  },
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": {
+        "en": "Image"
+      }
+    },
+    {
+      "type": "url",
+      "id": "video_link_fb",
+      "label": {
+        "en": "Video link"
+      }
+    },
+    {
+      "type": "text",
+      "id": "text-left",
+      "label": {
+        "en": "Text Left"
+      }
+    },
+    {
+      "type": "text",
+      "id": "text-right",
+      "label": {
+        "en": "Text Right"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Names Video"
+      },
+      "category": {
+        "en": "Image"
+      }
+    }
+  ]
+}
+{% endschema %}

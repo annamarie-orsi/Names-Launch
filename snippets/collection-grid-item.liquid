@@ -1,0 +1,62 @@
+<div class="d-md-flex justify-content-between w-100 py-3 d-none">
+  <div class="col text-left p-0 m-0">
+    <a href="{{ collection.url }}" class="collection-grid-item__link">
+      <div class="">
+        {{ collection.title }}
+      </div>
+    </a>
+  </div>
+  <div class="col text-left p-0 m-0 ">
+      <div class="">
+        <p>{{ collection.metafields['additional_info']['type'] }}</p>
+      </div>
+  </div>
+  <div class="col text-left p-0 m-0 ">
+      <div class="">
+        <p>{{ collection.metafields['additional_info']['location'] }}</p>
+      </div>
+  </div>
+  <div class="col text-right p-0 m-0 ">
+      <div class="">
+        <p>{{ collection.metafields['additional_info']['ship-date'] }}</p>
+      </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-between w-100 py-3 d-md-none">
+
+  <div class="col-4 text-center p-0 m-0">
+    <a href="{{ collection.url }}" class="">
+      <div class="">
+        {{ collection.title }}
+      </div>
+    </a>
+  </div>
+  <div class="col-4 text-center p-0 m-0 ">
+      <div class="">
+        <p>{{ collection.metafields['additional_info']['type'] }}</p>
+      </div>
+  </div>
+  <div class="col-4 text-center p-0 m-0 ">
+      <div class="">
+        <p>{{ collection.metafields['additional_info']['location'] }}</p>
+      </div>
+  </div>
+
+</div>
+
+<div class="row d-md-none m-0 p-0">
+
+  <div class="col-12 text-center d-block p-0 m-0">
+
+    <img src="{{ collection.image.src | collection_img_url: 'large' }}" alt="{{ collection.title | escape }}" />
+
+  </div>
+
+  <div class="col-12 py-3 text-center p-0 m-0 ">
+      <div class="">
+        <p>{{ collection.metafields['additional_info']['ship-date'] }}</p>
+      </div>
+  </div>
+
+</div>
