@@ -230,7 +230,7 @@ width: 50%;
 
   position: fixed;
   top:0;
-  z-index: 2;
+  z-index: 100;
 
 }
 
@@ -704,6 +704,35 @@ border: 1px solid #EDE9DF;
 
 }
 
+.selecttitle{
+
+  position: absolute;
+  width: 85%;
+  z-index: 3;
+}
+
+
+div.selecttitle > p {
+
+  background-color: #fafafa;
+
+}
+
+.circularcheckbox{
+
+  border-radius: 100%;
+  border: 1px black solid;
+  height: 15px;
+  width: 15px;
+
+}
+
+input:checked ~ .circularcheckbox{
+
+  background: black;
+
+}
+
 .shopify-challenge__container{
 
 padding-top: 150px;
@@ -763,7 +792,7 @@ input {
 .selectbrands {
 
   height: 400px;
-  overflow: hidden;
+  overflow-y:scroll;
 
 }
 

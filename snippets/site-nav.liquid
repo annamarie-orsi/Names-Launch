@@ -1,11 +1,5 @@
-{% comment %}
-    Renders a list of menu items
-    Accepts:
-    - linklist: {Object} Linklist Liquid object (required)
-{% endcomment %}
-
 <ul class="site-nav list--inline{% if wrapper_class != blank %} {{ wrapper_class }}{% endif %}" id="SiteNav">
-  
+
   {% for link in linklists[linklist].links %}
     {%- assign child_list_handle = link.title | handleize -%}
 

@@ -229,6 +229,7 @@ var intro = document.getElementById("introdiv");
 var background = document.getElementById("backgroundimagenav1");
 var navbar = document.getElementById("nav");
 var logo = document.getElementById("names_1_logo");
+var megaMenu = document.getElementById("megamenuindex");
 
 intro.offsetBottom = intro.offsetTop + intro.offsetHeight;
 var sticky = intro.offsetBottom;
@@ -269,6 +270,7 @@ navbar.addEventListener("mouseenter",function() {
       background.classList.remove("bg-names")
       background.classList.remove("bg-tan");
       logo.classList.add("d-none")
+      megaMenu.style.display = "none";
 
     }});
 

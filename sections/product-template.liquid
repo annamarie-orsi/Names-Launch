@@ -137,10 +137,21 @@
             </select>
 			{% endcomment %}
 
+        {% comment %}
+        new add to cart, appears if product DOES HAVE VARIANTS
+        {% endcomment %}
+
+          {% if customer.tags contains "Approved" %}
+
         	{% include 'product-variant-selector' %}
+
+          {% endif %}
 
             </div>
 
+            {% comment %}
+            original add to cart, appears if product DOES NOT HAVE VARIANTS
+            {% endcomment %}
             {% if customer.tags contains "Approved" %}
             <div class="product-form__controls-group product-form__controls-group--submit pt-4">
               <div class="product-form__item product-form__item--submit
